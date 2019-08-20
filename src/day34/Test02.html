@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<br>
+<img src="../img/1.jpg" id="pic" width="300px"/>
+
+</br>
+</body>
+<script>
+    window.setInterval("changepic()",500);
+
+    var num=1;
+    function changepic() {
+        var pic=document.getElementById("pic");
+        pic.src="../img/"+num+".jpg";
+        num++;
+        if (num==3){
+            num=1;
+        }
+    }
+
+    //定义函数
+    function f(a,b) {
+        document.write("arguments长度:"+arguments.length+"</br>");
+        for (var i=0;i<arguments.length;i++){
+            document.write(i+"->"+arguments[i]+"</br>");
+        }
+        document.write("a="+a+"</br>");
+        document.write("b="+b+"</br>");
+    }
+    f(3,5,8);
+
+    //匿名函数定义
+    var sum=function (a,b) {
+        return a+b;
+    }
+    //调用函数
+    document.write(sum(2,5)+"</br>");
+
+
+
+</script>
+</html>

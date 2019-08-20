@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部插入脚本</title>
+    <style>
+        div,span{ width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float:left; font-size: 17px;
+            font-family:Roman;
+        }
+        div .mini{
+            width: 30px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family:Roman;
+        }
+        div.visible{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<ul id="city">
+    <li id="bj" name="bei">北京</li>
+    <li id="tj" name="tia">天津</li>
+    <li id="cq" name="cho">重庆</li>
+</ul>
+<ul id="love">
+    <li id="fk" name="fan">反恐</li>
+    <li id="xj" name="xin">星际</li>
+</ul>
+<div id="fool">Hello1</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script>
+    // $("#city").append($("#fk"));
+    //$("#city").prepend($("#fk"));
+    //$("#tj").before($("#fk"));
+    //$("#tj").after($("#fk"));
+
+    $("#city").empty();//清空指定元素的所有子元素
+
+    $("#xj").remove();//删除指定元素
+
+
+    // 创建上海放到city的后面
+    $("#city").append($("<li id='sh' name=\"shanghai\">上海</li>"));
+
+</script>
+</html>

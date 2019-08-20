@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="按钮1" id="d2" onclick="f(this)" />
+<br>
+<input type="button" value="按钮1" id="b1" onclick="f()"/>
+<input type="button" value="按钮2" id="b2"/>
+用户名：<input type="text" id="t1"/>
+用户名：<input type="text" id="t2"/>
+</br>
+<input type="button" value="单击复制/双击清除" id="d1" />
+</br>
+<img src="../img/1.jpg" width="300px" id="pic"/>
+</br>
+<input type="text" id="user"/><span id="info" style="color: red"></span>
+</br>
+城市：
+<select id="city">
+    <option value="广州">广州</option>
+    <option value="深圳">深圳</option>
+    <option value="珠海">珠海</option>
+</select>
+<hr>
+英文：<input type="text" id="sun"/>
+<hr>
+<h2 id="key"></h2>
+</body>
+<script>
+    //改变事件
+    document.getElementById("city").onchange=function(){
+        alert(this.value);//this是select对象
+    }
+    //文本框改变事件
+    // document.getElementById("sun").onchange=function(){
+    //     //变成大写
+    //     this.value=this.value.toUpperCase();
+    // }
+    //使用松开按键事件
+    document.getElementById("sun").onkeyup=function(){
+        //变成大写
+        this.value=this.value.toUpperCase();
+    }
+    //按下键 在h2中显示按下键盘码 传入一个对象 通过这个对象keyCode属性得到按键编码
+    document.getElementById("sun").onkeydown=function(event){
+        document.getElementById("key").innerHTML=event.keyCode;
+    }
+
+
+
+    //得到文本框 设置得到焦点的事件
+    document.getElementById("user").onfocus=function(){
+        //得到span对象 修改它内部的html内容
+        document.getElementById("info").innerHTML="用户不能为空";
+    }
+    //失去焦点
+    document.getElementById("user").onblur=function(){
+        //得到span对象 修改它内部的html内容
+        document.getElementById("info").innerHTML="";
+    }
+    //得到图片对象
+    document.getElementById("pic").onmouseover=function(){
+        //修改它自己的src
+        this.src="../img/2.jpg";
+    }
+    //鼠标移出事件
+    document.getElementById("pic").onmouseout=function(){
+        //修改它自己的src
+        this.src="../img/1.jpg";
+    }
+    //得到这个d1对象 设置点击事件
+    document.getElementById("d1").onclick=function () {
+        //得到t1的值
+        document.getElementById("t2").value=document.getElementById("t1").value;
+    }
+    //双击事件
+    document.getElementById("d1").onclick=function () {
+        document.getElementById("t1").value="123";
+        document.getElementById("t2").value="123";
+    }
+
+    //命名函数的调用方式
+    function f() {
+        alert("我是按钮1");
+    }
+    //在页面加载完毕以后再执行这个代码
+    window.onload=function () {
+        //使用匿名函数
+        //得到b2这个对象
+        document.getElementById("b2").onclick=function () {
+            alert("我是按钮2");
+        }
+    }
+
+    //命名函数的调用方式
+    // function f() {
+    //     alert("我是按钮1");
+    // }
+    // //使用匿名函数
+    // //得到b2这个对象
+    // document.getElementById("b2").onclick=function () {
+    //     alert("我是按钮2")
+    // }
+</script>
+</html>

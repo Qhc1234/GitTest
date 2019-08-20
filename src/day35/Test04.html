@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        span{
+            /*出错信息为红色*/
+            color: red;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .main{
+            width: 525px;
+            margin-left: auto;
+            margin-left: auto;
+        }
+        .left{
+            text-align: right;
+            width: 80px;
+            height: 25px;
+            padding-right: 5px;
+        }
+        .center{
+            width: 280px;
+        }
+        .in{
+            width: 130px;
+            height: 16px;
+            border: solid 1px #79abea;
+        }
+        div{
+            color: #F00;
+        }
+    </style>
+</head>
+<body>
+<form action="server" method="post" id="myform" onsubmit="return checkAll()">
+    <table class="main" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td><h3>新用户注册</h3></td>
+        </tr>
+        <tr>
+            <td style="height: 10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0"cellpadding="0">
+                    <tr>
+                        <!-- 不能为空 输入长度必须介于5和10之间 -->
+                        <td class="left">用户名:</td>
+                        <td class="center">
+                            <!-- 失去焦点就调用 -->
+                            <input type="text" id="user" name="user" class="in" onblur="checkUser()"/>
+                            <span id="userInfo"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空 输入长度大于6个字符 -->
+                        <td class="left">密码:</td>
+                        <td class="center">
+                            <input type="password" id="pwd" name="pwd" class="in" onblur="checkPassword()"/>
+                            <span id="pasInfo"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空 与密码相同 -->
+                        <td class="left">确认密码:</td>
+                        <td class="center">
+                            <input id="repwd" name="repwd" type="password" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空 邮箱格式要正确 -->
+                        <td class="left">电子邮箱:</td>
+                        <td class="center">
+                            <input id="email" name="email" type="text" class="in" onblur="checkEmail()"/>
+                            <span id="emailInfo"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空 使用正则表达式自定义校检规则 1开头 11位全是数字 -->
+                        <td class="left">手机号码:</td>
+                        <td class="center">
+                            <input type="text " id="mobile" name="mobile" class="in" onblur="checkMobile()"/>
+                            <span id="mobileInfo"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空 要正确的日期格式 -->
+                        <td class="left">生日:</td>
+                        <td class="center">
+                            <input id="birth" name="birth" type="text" class="in" onblur="checkBirthday()"/>
+                            <span id="birthdayInfo"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">&nbsp;</td>
+                        <td class="center">
+                            <input name="" type="submit" style="width: 100px;height: 30px;"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<!--外部文件-->
+<script type="text/javascript" src="../js/Form.js"></script>
+</html>

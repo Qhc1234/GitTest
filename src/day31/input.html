@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!--提交到网易云-->
+<form action="https://music.163.com/">
+    <label>用户名：</label><input type="text" name="username"placeholder="请输入您的用户名" maxlength="5"/><br/>
+    <label>密码：</label><input type="password" name="password"/><br/>
+    <label>性别：</label><input type="radio" name="sex" id="man"/>
+    <label for="man">男</label>
+    <input type="radio" name="sex" id="grid"/>
+    <label for="grid">女</label>
+    <p>爱好:
+        <input type="checkbox" >唱歌
+        <input type="checkbox" >跳舞
+        <input type="checkbox" >敲代码
+        <input type="checkbox" >rad
+        <input type="checkbox" >打篮球
+    </p>
+    <input type="button" value="我是按钮"/><br/><br/>
+    <input type="submit" value="提交按钮"/><br/><br/>
+    <input type="reset" value="重置按钮"/><br/><br/>
+    <div align="center"><input type="image" src="../img/QQ图片20190725143020.jpg"/><br/><br/></div>
+    <input type="file" value="选择文件"/><br/><br/>
+    <label>自我介绍：</label><textarea name="" cols="60" rows="10" autofocus></textarea><br/><br/>
+    <label>所属部门：</label>
+    <select name="">
+        <option value="">请选择</option>
+        <option value="">研发部</option>
+        <option value="">人事部</option>
+        <option value="">总裁办</option>
+        <option value="" selected>董事会</option><!--selected-默认选择董事会-->
+    </select><br/><br/>
+    <input type="file" multiple/><br/><br/>
+    <input type="text" autocomplete="on" name="asd"/><br/><br/>
+    <input type="text" required/><br/><br/>
+    <input type="text" accesskey="p"/><br/><br/>
+    <label>datalist用法：</label><input list="names"/>
+    <datalist id="names">
+        <option>马云</option>
+        <option>马化腾</option>
+        <option>王健林</option>
+        <option>王思聪</option>
+    </datalist>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部插入脚本</title>
+    <style>
+        .one{
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div class="one"></div>
+<input type="button" id="btn1" value="添加class">
+<input type="button" id="btn2" value="移出class">
+<input type="button" id="btn3" value="切换class">
+<br><br>
+</body>
+<script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script>
+    $("#btn1").click(function () {
+        $("div").addClass("one");
+    });
+    $("#btn2").click(function () {
+        $("div").removeClass("one");
+    });
+    $("#btn3").click(function () {
+        $("div").toggleClass("one");
+    });
+</script>
+</html>

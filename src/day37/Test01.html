@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #b4{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(255,231,147);
+        }
+    </style>
+</head>
+<body>
+<!--<input type="button" value="隐藏" id="hide">-->
+<!--<input type="button" value="显示" id="show">-->
+<!--<input type="button" value="切换" id="toggle">-->
+
+<!--<input type="button" value="向上滑动" id="hide">-->
+<!--<input type="button" value="向下滑动" id="show">-->
+<!--<input type="button" value="切换滑动" id="toggle">-->
+
+<input type="button" value="淡出" id="hide">
+<input type="button" value="淡入" id="show">
+<input type="button" value="切换" id="toggle">
+<br><br>
+<hr>
+<div id="b4"></div>
+
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script>
+    $("#hide").click(function () {
+        $("#b4").fadeOut(400,function () {
+            alert("淡出完毕");
+        });
+    });
+
+    $("#show").click(function () {
+        $("#b4").fadeIn(400,function () {
+            alert("淡入完毕");
+        });
+    });
+
+    $("#toggle").click(function () {
+        $("#b4").fadeToggle(400,function () {
+            alert("切换完毕");
+        });
+    });
+
+</script>
+</html>

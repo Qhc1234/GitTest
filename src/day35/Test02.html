@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a:link{
+            text-decoration:none ;
+        }
+        a:hover{
+            color:red;
+        }
+        #info{
+            /*设置样式让info这个div不可见*/
+            display: none;
+            border: 1px dashed black;
+            width: 200px;
+            height: 30px;
+            text-align:center;
+            /*上下居中*/
+            line-height: 30px;
+            border-radius: 5px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<a href="https:\\www.baidu.com" id="cz">点我进入百度</a>
+<div id="info">你即将进入百度首页</div>
+</body>
+<script>
+
+    // var reg=/abc/i;//忽略大小写
+    // document.write(reg.test("abc")+"</br>");
+    // document.write(reg.test("ABC")+"</br>");
+    // document.write(reg.test("aBc")+"</br>");
+
+    window.onload=function () {
+        //设置鼠标上和移出事件
+        document.getElementById("cz").onmouseover=function () {
+            //让div可见
+            document.getElementById("info").style.display="block";
+        }
+        document.getElementById("cz").onmouseover=function () {
+            //让div不可见
+            document.getElementById("info").style.display="none";
+        }
+    }
+</script>
+</html>

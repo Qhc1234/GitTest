@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ表情</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sum{
+            margin: 50px;
+        }
+        ul{
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+        }
+        .sum img{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="sum">
+    <ul>
+        <li><span>在</span></li>
+        <li><span>座</span></li>
+        <li><span>的</span></li>
+        <li><span>各</span></li>
+        <li><span>为</span></li>
+        <li><span>都</span></li>
+        <li><span>是</span></li>
+        <li><span>弟</span></li>
+        <li><span>弟</span></li>
+        <li><span>。</span></li>
+    </ul>
+    <p class="word">
+        <strong>请发言:</strong>
+    </p>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        $("li span").click(function () {
+            $("p").append($(this).clone());
+        });
+    });
+</script>
+</html>

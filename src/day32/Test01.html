@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css复合选择器</title>
+    <style type="text/css">
+        .nav a{
+            color:blue;
+        }
+        .sum a{
+            color: red;
+        }
+        div{
+            font-size: 14px;
+            font-family: "宋体";
+        }
+        li > a:nth-child(1){
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+<div class="nav"><!--主导航栏-->
+    <ul>
+        <li><a href="">公司首页</a></li>
+        <li><a href="">公司简介</a></li>
+        <li><a href="">公司产品</a></li>
+        <li>
+        <a href="">联系我们</a>
+            <ul>
+                <li><a href="">公司邮箱</a></li>
+                <li><a href="">公司电话</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="sum"><!--侧导航栏-->
+    <dlv class="site-l">左侧导航栏</dlv>
+    <dlv class="site_q"><a href="">登录</a></dlv>
+</div>
+</body>
+</html>

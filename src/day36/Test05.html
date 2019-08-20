@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本过滤选择器</title>
+    <style>
+        div,span{
+            width: 180px;
+            height: 180px;
+            margin: 20px;
+            background: #9999cc;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family:Roman;
+        }
+        div .mini{
+            width: 50px;
+            height: 50px;
+            background: #cc66ff;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family: Roman;
+        }
+        div .mini01{
+            width: 50px;
+            height: 50px;
+            background: #cc66ff;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family: Roman;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="首元素选择器" id="a1"><br><br>
+<input type="button" value="尾元素选择器" id="a2"><br><br>
+<input type="button" value="非元素选择器" id="a3"><br><br>
+<input type="button" value="偶数选择器" id="a4"><br><br>
+<input type="button" value="奇数选择器" id="a5"><br><br>
+<input type="button" value="等于索引选择器" id="a6"><br><br>
+<input type="button" value="大于索引选择器" id="a7"><br><br>
+<input type="button" value="小于索引选择器" id="a8"><br><br>
+<input type="button" value="标题选择器" id="a9"><br><br>
+
+<div id="one">
+
+</div>
+<div id="two" class="mini">
+    <div class="mini"></div>
+</div>
+<div class="one">
+    <div class="mini"></div>
+    <div class="mini"></div>
+</div>
+<div class="one">
+    <div class="mini01"></div>
+    <div class="mini"></div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/Selector.js"></script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历元素</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<ul id="b">
+    <li>上饶</li>
+    <li>抚州</li>
+    <li>南昌</li>
+    <li>新余</li>
+    <li>景德镇</li>
+</ul>
+
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script>
+var lis=$("#b li");
+
+// for (var i=0;i<lis.length;i++){
+//     var sun=$(lis[i]);
+//     alert(sun.text());
+// }
+
+    // lis.each(function (index,element) {
+    //     alert($(element).text());
+    // });
+
+   // $.each(lis,function (index,element) {
+   //   alert($(element).text());
+   //   });
+
+    for (var li of lis){
+        var  b=$(li);
+        alert(b.text());
+    }
+</script>
+</html>

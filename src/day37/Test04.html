@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广告的自动显示与隐藏</title>
+    <style>
+        #content { width: 1100px; height: 500px; background: #999; margin:0 auto; }
+        #ad{width: 1100px; height: 500px; background: #999; margin:0 auto; }
+    </style>
+</head>
+<body>
+<div>
+    <div id="ad" style="display: none">
+        <img src="../img/3.gif" style="width: 100%" height= "100%"/>
+    </div>
+    <div id="content">
+        <img src="../img/2.jpg" style="width: 100%" height="100%"/>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        setTimeout(function () {
+            //让广告向下滑动显示 动画执行3秒
+            $("#ad").slideDown(3000,function () {
+                //广告停留1秒
+                setTimeout(function () {
+                    //向上滑动隐藏 动画执行3秒
+                    $("#ad").slideUp(3000);
+                },1000);
+            })
+        },3000)
+    });
+</script>
+</html>

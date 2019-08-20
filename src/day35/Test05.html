@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="button" onclick="location.reload()" value="刷新"></br></br>
+<input type="button" onclick="history.forward()" value="前进"/></br></br>
+<input type="button" value="后退" onclick="history.back()"/></br></br>
+<span id="time">5</span>秒后回到主页</br>
+</body>
+<script>
+    //得到当前访问地址
+    document.write(location.href+"</br>");
+    //设置属性值 页面进行跳转
+     //location.href="https://baidu.com";
+    //输出时间
+    document.write(new Date().toLocaleDateString()+"</br>");
+
+    //创建一个用于计数的全局变量
+    var count=4;
+    //每过一秒调用一次函数
+    window.setInterval(function () {
+        //修改time中数字
+        document.getElementById("time").innerHTML=count;
+        //如果等于1 进行页面的跳转
+        if (count==0){
+            location.href="https://baidu.com";
+        }
+        //减一
+        count--;
+    },1000);
+
+
+
+    // var date=new Date();
+    // document.write("默认样式:"+date+"</br>");
+    // document.write("年份:"+date.getFullYear()+"</br>");
+    // document.write("月份:"+(date.getUTCMonth()+1)+"</br>");
+    // document.write("周几:"+date.getDay()+"</br>");
+    // document.write("毫秒数:"+date.getTime()+"</br>");
+    // document.write("本地时间:"+date.toLocaleDateString()+"</br>");
+</script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的jquery表单校验页面</title>
+    <style>
+        p { text-align: center; font-size: 24px; }
+        table { margin: 0 auto; border: 0; }
+        table tr { height: 40px; border: 0; }
+        table tr td { padding: 0 14px; border: 1px solid #999 }
+        .error { color: red }
+    </style>
+</head>
+<body>
+<p>员工信息录入</p>
+<form action="test.html" method="action" id="empForm" name="empForm">
+    <table border="1">
+        <tr>
+            <td>真实姓名 不能为空</td>
+            <td><input type="text" id="realname" name="realname"></td>
+        </tr>
+        <tr>
+            <td>登录名 不能为空 5-8</td>
+            <td><input type="text" id="username" name="username"></td>
+        </tr>
+        <tr>
+            <td>密码 不能为空 6-12</td>
+            <td><input type="password" id="psw" name="psw"></td>
+        </tr>
+        <tr>
+            <td>重复密码</td>
+            <td><input type="password" id="psw2" name="psw2"></td>
+        </tr>
+        <tr>
+            <td>性别 必选其一</td>
+            <td>
+                <input type="radio" id="gender_male" value="m" name="gender"> 男
+                <input type="radio" id="gender_female" value="m" name="gender"> 女
+                <lable for="gender" class="error" style="display: none">必选字段</lable>
+            </td>
+        </tr>
+        <td>年龄 26-50</td>
+        <td><input type="text" id="age" name="ag"></td>
+        <tr>
+            <td>你的学历</td>
+            <td>
+            <select name="edu" id="edu">
+                <option value="">-请选择你的学历-</option>
+                <option value="a">专科</option>
+                <option value="b">本科</option>
+                <option value="c">研究生</option>
+                <option value="d">硕士</option>
+                <option value="e">博士</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>出生日期</td>
+            <td><input type="date" id="birthday" name="birthday" value=""/></td>
+        </tr>
+        <tr>
+            <td>兴趣爱好</td>
+            <td onclose="2">
+                <input type="checkbox" name="checkbok1" id="qq1">乒乓球
+                <input type="checkbox" name="checkbok1" id="qq2" value="1">羽毛球
+                <input type="checkbox" name="checkbok1" id="qq3" value="2">上网
+                <input type="checkbox" name="checkbok1" id="qq4" value="3">旅游
+                <input type="checkbox" name="checkbok1" id="qq5" value="4">购物
+                <lable for="checkbok1" generated="true" class="error" style="display: none">必选字段</lable>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">电子邮箱</td>
+            <td><input type="text" id="email" name="email"></td>
+        </tr>
+        <tr>
+            <td align="left">身份证 15-18</td>
+            <td><input type="text" id="cart" name="cart"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" id="firstname" name="firstname" value="保存"></td>
+        </tr>
+    </table>
+</form>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/Test07.js"></script>
+</html>
